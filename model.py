@@ -13,7 +13,7 @@ _dataframe = {
 df  = pd.DataFrame(_dataframe)
 
 # Google sheets api connection
-st.cache_data(ttl=60, show_spinner=True)
+st.cache_data()
 def apiConnect():
     conn = st.connection("gsheets", type=GSheetsConnection)
     df = conn.read(
