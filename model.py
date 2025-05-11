@@ -3,15 +3,6 @@ import pandas as pd
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
-# Lifelong Learning Data
-_dataframe = {
-    "TECNOLOGIA": ["Django", "Flet", "Langchain"],
-    "PROFIÊNCIA": ["NOVATO", "SEM CONTATO", "SEM CONTATO"]
-}
-
-# Creating dataframe
-df  = pd.DataFrame(_dataframe)
-
 # Google sheets api connection
 st.cache_data(show_spinner=True)
 def apiConnect():
