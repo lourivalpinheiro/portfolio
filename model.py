@@ -16,5 +16,6 @@ df  = pd.DataFrame(_dataframe)
 st.cache_data(ttl=60, show_spinner=True)
 def apiConnect():
     conn = st.connection("gsheets", type=GSheetsConnection)
-    df = conn.read(spreadsheet=st.secrets['database']['spreadsheet'])
+    df = conn.read(
+        spreadsheet=st.secrets['database']['spreadsheet'])
     return df  # ← Returning the dataframe so I can display it in the app.

@@ -105,6 +105,11 @@ st.divider()
 # Google Sheets Connection
 lllData = apiConnect()
 st.dataframe(lllData, use_container_width=True)
+# Refreshind data
+def refreshData():
+    st.cache_data.clear()
+    
+st.button("ATUALIZAR", on_click=refreshData, help="Atualiza os dados da tabela.")
 
 # Projects
 ## Header
