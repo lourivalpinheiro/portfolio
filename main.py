@@ -145,7 +145,7 @@ with planilhasNfse:
         st.markdown("### Planilhas Nfse")
         st.caption("Cria um modelo de importação de planilhas de notas de serviço para o sistema [Domínio](https://www.dominiosistemas.com.br/).")
         with st.popover("STATUS"):
-            st.success("ATIVO", icon="🏃‍♂️‍➡️")
+            st.success("ATIVO", icon="🏃‍♂")
         st.divider()
         st.image(image="static/planilhasnfse.png")
         st.button(label="ACESSAR", disabled=True, help="No momento, este app é privado. Uma versão pública será lançada em breve.")
