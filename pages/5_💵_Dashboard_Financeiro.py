@@ -6,6 +6,16 @@ from model import *
 # Page's main configuration
 st.set_page_config("Login Finanças", page_icon="💵", layout="wide")
 
+# Hiding humburguer menu
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Checking login state
 if 'authenticated' not in st.session_state or not st.session_state['authenticated']:
     st.image("static/loginImage.svg")
