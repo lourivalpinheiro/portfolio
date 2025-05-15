@@ -87,6 +87,14 @@ with tab4:
     st.caption("jun de 2024 - mar de 2025")
     st.caption(" Minha responsabilidade é organizar a documentação enviada pelos clientes, assegurando que esteja em conformidade com o período de competência e estruturada corretamente para o devido registro dos fatos contábeis no sistema Domínio. Adicionalmente, realizo a conferência de relatórios cruciais que, em conjunto, irão compor as demonstrações contábeis.")
 
-
+# Hiding humburguer menu
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
