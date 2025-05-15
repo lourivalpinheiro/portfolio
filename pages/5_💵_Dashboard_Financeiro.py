@@ -57,4 +57,14 @@ with st.sidebar:
     if logoutButton:
         st.session_state['authenticated'] = False
         switch_page('pages/4_Login_Finanças.py')
-    
+
+
+# Hiding humburguer menu
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
