@@ -66,7 +66,7 @@ with st.sidebar:
     logoutButton = st.button("SAIR")
     if logoutButton:
         st.session_state['authenticated'] = False
-        switch_page('pages/4_Login_Finanças.py')
+        switch_page('pages/3_💵_Login_Dashboard_Financeiro.py')
 
 
 # Hiding humburguer menu
