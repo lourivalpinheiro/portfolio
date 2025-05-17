@@ -1,6 +1,6 @@
 # Importing necessary libraries
-import streamlit as st 
-from model import *
+import streamlit as st
+from model import apiConnect
 
 # Stay updated
 st.markdown("# 📚 Lifelong Learning")
@@ -9,10 +9,13 @@ st.divider()
 # Google Sheets Connection
 lllData = apiConnect()
 st.dataframe(lllData, use_container_width=True)
+
+
 # Refreshind data
 def refreshData():
     st.cache_data.clear()
-    
+
+
 st.button("ATUALIZAR", on_click=refreshData, help="Atualiza os dados da tabela.")
 
 # Hiding humburguer menu

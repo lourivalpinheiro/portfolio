@@ -20,7 +20,11 @@ with simpleCalculator:
             st.error("ARQUIVADO", icon="🗃️")
         st.divider()
         st.image(image="static/simplecalculator.png", width=210)
-        st.link_button(label="BAIXAR", url="https://1drv.ms/u/c/1298dd6ed5ce46e7/ESxpIYzN8nRBid2lGl0o3zsBWjW6PYSFqUEjndf49iH6yQ?e=ncV9az", icon=":material/download:")
+        st.link_button(
+            label="BAIXAR",
+            url="https://1drv.ms/u/c/1298dd6ed5ce46e7/ESxpIYzN8nRBid2lGl0o3zsBWjW6PYSFqUEjndf49iH6yQ?e=ncV9az",
+            icon=":material/download:",
+        )
 
 with budgetCreator:
     with st.expander(label="BUDGEN"):
@@ -30,17 +34,27 @@ with budgetCreator:
             st.info("EM DESENVOLVIMENTO", icon="🚧")
         st.divider()
         st.image(image="static/budget-creator.png")
-        st.link_button(label="ACESSAR", url="https://criadordeorcamentosltpneto.streamlit.app/", icon=":material/link:")
+        st.link_button(
+            label="ACESSAR",
+            url="https://criadordeorcamentosltpneto.streamlit.app/",
+            icon=":material/link:",
+        )
 
 with planilhasNfse:
     with st.expander(label="Planilhas Nfse"):
         st.markdown("### Planilhas Nfse")
-        st.caption("Cria um modelo de importação de planilhas de notas de serviço para o sistema [Domínio](https://www.dominiosistemas.com.br/).")
+        st.caption(
+            "Cria um modelo de importação de planilhas de notas de serviço para o sistema [Domínio](https://www.dominiosistemas.com.br/)."
+        )
         with st.popover("STATUS"):
             st.success("ATIVO", icon="🏃‍♂")
         st.divider()
         st.image(image="static/planilhasnfse.png")
-        st.button(label="ACESSAR", disabled=True, help="No momento, este app é privado. Uma versão pública será lançada em breve.")
+        st.button(
+            label="ACESSAR",
+            disabled=True,
+            help="No momento, este app é privado. Uma versão pública será lançada em breve.",
+        )
 
 # Hiding humburguer menu
 hide_st_style = """
