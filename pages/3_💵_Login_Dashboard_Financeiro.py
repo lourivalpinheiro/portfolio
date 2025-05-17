@@ -28,7 +28,7 @@ with st.form("financeLogin"):
                     # Now that I've minimized the potential errors, I validate it.
                     if senha_digitada == senha_salva:
                         st.session_state['authenticated'] = True
-                        switch_page("pages/5_💵_Dashboard_Financeiro.py")
+                        switch_page("pages/4_💵_Dashboard_Financeiro.py")
                     else:
                         st.error(" ❌ Senha incorreta.")
                 else:
