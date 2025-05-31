@@ -2,7 +2,7 @@
 import streamlit as st
 
 # PAge's main configuration
-st.set_page_config("Projetos", page_icon="", layout="centered")
+st.set_page_config("Projetos", page_icon="", layout="wide")
 # Projects
 ## Header
 st.markdown("# 🗄️ Projetos")
@@ -46,21 +46,66 @@ with tab1:
             )
 
 with tab2:
-    # PLanilhas NFSe
-    with st.expander(label="TEAM ECOSYSTEM"):
-        st.markdown("### Team Ecosystem")
-        st.caption(
-            "Um ecossistema com ferramentas desenvolvidas para ajudar os setores no que concerne à comunicação, informação e automação de processos."
-        )
-        with st.popover("STATUS"):
-            st.success("ATIVO", icon="🏃‍♂")
-        st.divider()
-        st.image(image="static/teamEco.png")
-        st.button(
-            label="ACESSAR",
-            disabled=True,
-            help="Este app é privado."
-        )
+    ## Elements
+    teamEcoSystem, tributoSmartAnalytics = st.columns(2, gap='small')
+    
+    with teamEcoSystem:
+        # Team Ecosystem
+        with st.expander(label="TEAM ECOSYSTEM"):
+            st.markdown("### Team Ecosystem")
+            st.caption(
+                "Um ecossistema com ferramentas desenvolvidas para ajudar os setores no que concerne à comunicação, informação e automação de processos."
+            )
+            with st.popover("STATUS"):
+                st.success("ATIVO", icon="🏃‍♂")
+            st.divider()
+            st.image(image="static/teamEco.png")
+            st.button(
+                label="ACESSAR",
+                disabled=True,
+                help="Este app é privado."
+            )
+    
+    with tributoSmartAnalytics:    
+        # TributoSmart Analytics
+        with st.expander(label="TRIBUTOSMART ANALYTICS"):
+            st.markdown("### TributoSmart Analytics")
+            st.caption(
+                "Esboço de um app para acompanhamento e análise de recuperações tributárias."
+            )
+            with st.popover("STATUS"):
+                st.success("ATIVO", icon="🏃‍♂")
+            st.divider()
+            st.image(image="static/tributoSmartAnalytics.png")
+            st.markdown('''
+                        #### CONTEXTO
+                        ---
+                        - Este projeto foi desenvolvido por mim, Neto Pinheiro, como elemento integrante da apresentação a ser feita aos responsáveis pelo setor Jurídico da Team Contabilidade, Tamires e Thiago, após ininterruptas terças-feiras de treinamento sobre Direito Empresarial e Recuperação Tributária durante o mês de maio.
+
+                        #### OBJETIVO
+                        ---
+                        - O objetivo do app foi, com o conhecimento dos membros do projeto, Carlos, Marcos e eu, Neto Pinheiro, simularmos uma recuperação tributária de uma empresa fictícia. Para isso, eu resolvi criar esse app;
+
+                        #### CARACTERÍSTICAS
+                        ---
+                        1. Apresentação dos dados brutos, fornecendo uma análise simples dos dados a fim de contextualizar o cliente a respeito do processo até o resultado de sua recuperação;
+                        2. Área de análise mais aprofundada sobre os dados da recuperação, fornecendo ao cliente um dashboard, onde ele pode interagir com os gráficos que foram criados tendo como base atributos do conjunto de dados de sua recuperação tributária.
+
+                        #### TECNOLOGIAS
+                        ---
+                        - Inteligência Artificial para criar o conjunto de dados que simulasse uma recuperação tributária;
+                        - Python juntamente às bibliotecas:
+                            1. Streamlit: criação da interface gráfica;
+                            2. Pandas: análise exploratória de dados básica feita por mim a fim de praticar conteúdos absorvidos em meus estudos;
+                            3. Plotly: criação de gráficos interativos.
+                        - Paradigma de Programação orientada a objetos assim como princípios SOLID também foram aplicados ao projeto.
+
+                        #### CONCLUSÃO
+                        ---
+                        - Não só fizemos um resumo do conteúdo prático que nos foi passado ao longo do mês de maio, mas também conseguimos criar o esboço de um projeto que, dado o interesse da liderança, pode vir a tornar-se uma ferramenta útil para os clientes participarem mais ativamente do processo de recuperação tributária.
+                        ''')
+            st.link_button(label="ACESSAR", url='https://teamcontabilidade-treinamentorecuperacaotributaria.streamlit.app/')
+        
 
 # Hiding humburguer menu
 hide_st_style = """
