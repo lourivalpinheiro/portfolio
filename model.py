@@ -42,5 +42,5 @@ incomeXexpenseAnalysis = df.groupby("TIPO")["VALOR"].sum().reset_index()
 
 ## Plotly bar chart
 incomeXexpenseAnalysisFig = px.bar(
-    incomeXexpenseAnalysis, x="TIPO", y="VALOR", color_continuous_scale="GREEN"
+    incomeXexpenseAnalysis, x="TIPO", y="VALOR", color_discrete_sequence=['green']
 )
