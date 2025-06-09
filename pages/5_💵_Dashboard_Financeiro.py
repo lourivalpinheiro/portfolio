@@ -12,7 +12,7 @@ if "authenticated" not in st.session_state or not st.session_state["authenticate
     HideElement.hide_header()
     
     st.header(" 💵 Dashboard Financeiro")
-    with st.form("financeLogin"):
+    with st.form("financeLogin", enter_to_submit=False):
         username = st.text_input("USUÁRIO")
         password = st.text_input("SENHA", type="password")
         validate = st.form_submit_button("ENTRAR")
