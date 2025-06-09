@@ -1,24 +1,17 @@
 # Importing necessary modules
 import streamlit as st
+from classes.footer import Footer
+from classes.hideelement import HideElement
 
 # Page's main configuration
 st.set_page_config(page_title='PyCharm', page_icon='🐍', layout='wide')
+HideElement.hide_header()
 
 # Page's header
 st.title('📰 Blog')
 st.divider()
 
 with st.expander('PyCharm Professional'):
-    # Hiding humburguer menu
-    hide_st_style = """
-                <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
-                </style>
-                """
-    st.markdown(hide_st_style, unsafe_allow_html=True)
-
     # Page's content
 
     ## Definition
@@ -60,3 +53,5 @@ with st.expander('PyCharm Professional'):
     
     Em resumo, escolhi o **PyCharm** porque ele me proporciona um ambiente de trabalho mais completo, organizado e eficiente. Com ele, consigo manter um alto padrão de qualidade nos meus projetos Python e garantir maior produtividade no meu dia a dia profissional.    
     """)
+
+Footer.footer()

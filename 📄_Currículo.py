@@ -1,8 +1,11 @@
 # Importing necessary libraries
 import streamlit as st
+from classes.footer import Footer
+from classes.hideelement import HideElement
 
 # Page's main configuration
 st.set_page_config(page_title="Currículo", layout="centered")
+HideElement.hide_header()
 
 # Page's Content
 st.image(image="static/netopinheiro.jpeg", width=150)
@@ -62,12 +65,4 @@ with tab3:
         " Minha responsabilidade é organizar a documentação enviada pelos clientes, assegurando que esteja em conformidade com o período de competência e estruturada corretamente para o devido registro dos fatos contábeis no sistema Domínio. Adicionalmente, realizo a conferência de relatórios cruciais que, em conjunto, irão compor as demonstrações contábeis."
     )
 
-# Hiding humburguer menu
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+Footer.footer()

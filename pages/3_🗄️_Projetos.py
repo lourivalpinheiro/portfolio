@@ -1,8 +1,13 @@
 # Importing necessary libraries
 import streamlit as st
 
+from classes.footer import Footer
+from classes.hideelement import HideElement
+
 # PAge's main configuration
 st.set_page_config("Projetos", page_icon="", layout="wide")
+HideElement.hide_header()
+
 # Projects
 ## Header
 st.markdown("# 🗄️ Projetos")
@@ -47,19 +52,19 @@ with tab1:
 
 with tab2:
     ## Elements
-    teamEcoSystem, tributoSmartAnalytics = st.columns(2, gap='small')
+    teamOne, tributoSmartAnalytics = st.columns(2, gap='small')
     
-    with teamEcoSystem:
-        # Team Ecosystem
-        with st.expander(label="TEAM ECOSYSTEM"):
-            st.markdown("### Team Ecosystem")
+    with teamOne:
+        # Team One
+        with st.expander(label="TEAM ONE"):
+            st.markdown("### Team One")
             st.caption(
-                "Um ecossistema com ferramentas desenvolvidas para ajudar os setores no que concerne à comunicação, informação e automação de processos."
+                "Um espaço seguro e integrado com ferramentas desenvolvidas para ajudar os setores no que concerne à comunicação, informação e automação de processos."
             )
             with st.popover("STATUS"):
                 st.success("ATIVO", icon="🏃‍♂")
             st.divider()
-            st.image(image="static/teamEco.png")
+            st.image(image="static/teamone.png")
             st.button(
                 label="ACESSAR",
                 disabled=True,
@@ -107,12 +112,4 @@ with tab2:
             st.link_button(label="ACESSAR", url='https://teamcontabilidade-treinamentorecuperacaotributaria.streamlit.app/')
         
 
-# Hiding humburguer menu
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+Footer.footer()
