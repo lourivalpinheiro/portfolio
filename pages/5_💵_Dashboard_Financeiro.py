@@ -3,7 +3,7 @@ import streamlit as st
 from classes.footer import Footer
 from classes.hideelement import HideElement
 from classes.apiconnection import ApiConnecetion
-from classes.plots import incomeXexpenseAnalysisFig
+from classes.plots import Chart
 
 # Login
 if "authenticated" not in st.session_state or not st.session_state["authenticated"]:
@@ -46,7 +46,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.dataframe(df)
 with col2:
-    st.plotly_chart(incomeXexpenseAnalysisFig)
+    st.plotly_chart(Chart.generate_chart())
 
 with st.sidebar:
     if st.button("SAIR"):
