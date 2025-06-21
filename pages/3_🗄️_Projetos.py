@@ -18,7 +18,7 @@ tab1, tab2 = st.tabs(['Pessoais', 'Team Contabilidade'])
 
 with tab1:
     ## Elements
-    simpleCalculator, budgetCreator = st.columns(2, gap='small')
+    simpleCalculator, budgetCreator, roundpizza = st.columns(3, gap='small')
     
     # Simple Calculator
     with simpleCalculator:
@@ -47,6 +47,22 @@ with tab1:
             st.link_button(
                 label="ACESSAR",
                 url="https://criadordeorcamentosltpneto.streamlit.app/",
+                icon=":material/link:",
+            )
+
+
+    # Round Pizza
+    with roundpizza:
+        with st.expander(label="ROUND PIZZA"):
+            st.markdown("### Modelo de Machine Learning")
+            st.caption("Faz previsões de preços de pizzas com base no diâmetro.")
+            with st.popover("STATUS"):
+                st.info("ATIVO", icon="🏃‍♂")
+            st.divider()
+            st.image(image="static/roundpizza.png")
+            st.link_button(
+                label="ACESSAR",
+                url="https://roundpizza.streamlit.app/",
                 icon=":material/link:",
             )
 
